@@ -11,31 +11,41 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
         }
         #title {
+            flex: 0 0 auto;
             text-align: center;
-            background-color: #003300;
-            padding: 20px;
+            background-color: #000000;
+            padding: 10px;
             font-size: 2em;
         }
+        #main {
+            display: flex;
+            flex: 1;
+        }
         #sidebar {
-            width: 20%;
-            float: left;
-            background-color: #001122;
+            flex: 0 0 auto;
+            background-color: #000000;
             padding: 20px;
-            height: 100vh;
-            box-sizing: border-box;
         }
         #content {
-            margin-left: 20%;
-            padding: 20px;
-            background-color: #222222;
-            min-height: 80vh;
+            flex: 1;
+            padding: 0;
+            background-color: #000000;
+            overflow: hidden;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
         }
         #footer {
-            clear: both;
+            flex: 0 0 auto;
             text-align: center;
-            background-color: #003300;
+            background-color: #000000;
             padding: 10px;
         }
         ul {
@@ -52,8 +62,11 @@
             color: #66ff66;
             text-decoration: none;
         }
-        a:hover {
-            color: #99ff99;
+        #sidebar > ul > li {
+            font-weight: bold;
+        }
+        .submenu li {
+            font-weight: normal;
         }
     </style>
 </head>
@@ -61,31 +74,33 @@
     <div id="title">
         <h1>Visualización de la Información</h1>
     </div>
-    <div id="sidebar">
-        <ul>
-            <li><a href="intro_personal.html">Intro Personal</a></li>
-            <li>Clases
-                <ul class="submenu">
-                    <li><a href="clase1.html">Clase 1</a></li>
-                    <li><a href="#">Clase 2</a></li>
-                    <li><a href="#">Clase 3</a></li>
-                    <li><a href="#">Clase 4</a></li>
-                    <li><a href="#">Clase 5</a></li>
-                    <li><a href="#">Clase 6</a></li>
-                    <li><a href="#">Clase 7</a></li>
-                    <li><a href="#">Clase 8</a></li>
-                </ul>
-            </li>
-            <li>TPs
-                <ul class="submenu">
-                    <li><a href="#">TP 1</a></li>
-                    <li><a href="#">TP 2</a></li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-    <div id="content">
-        <p>Contenido central aquí. Este será el área que cambie según la navegación.</p>
+    <div id="main">
+        <div id="sidebar">
+            <ul>
+                <li><a href="intro_personal.html" target="contentFrame">Intro Personal</a></li>
+                <li>Clases
+                    <ul class="submenu">
+                        <li><a href="clase1.html" target="contentFrame">Clase 1</a></li>
+                        <li><a href="#" target="contentFrame">Clase 2</a></li>
+                        <li><a href="#" target="contentFrame">Clase 3</a></li>
+                        <li><a href="#" target="contentFrame">Clase 4</a></li>
+                        <li><a href="#" target="contentFrame">Clase 5</a></li>
+                        <li><a href="#" target="contentFrame">Clase 6</a></li>
+                        <li><a href="#" target="contentFrame">Clase 7</a></li>
+                        <li><a href="#" target="contentFrame">Clase 8</a></li>
+                    </ul>
+                </li>
+                <li>TPs
+                    <ul class="submenu">
+                        <li><a href="#" target="contentFrame">TP 1</a></li>
+                        <li><a href="#" target="contentFrame">TP 2</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div id="content">
+            <iframe src="intro_personal.html" name="contentFrame"></iframe>
+        </div>
     </div>
     <div id="footer">
         <p>ITBA - Maestría en Ciencia de Datos - Marzo 2026</p>
