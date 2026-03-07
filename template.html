@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #title {
+            text-align: center;
+            background-color: #003300;
+            padding: 20px;
+            font-size: 2em;
+        }
+        #sidebar {
+            width: 20%;
+            float: left;
+            background-color: #001122;
+            padding: 20px;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+        #content {
+            margin-left: 20%;
+            padding: 20px;
+            background-color: #222222;
+            min-height: 80vh;
+        }
+        #footer {
+            clear: both;
+            text-align: center;
+            background-color: #003300;
+            padding: 10px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        .submenu {
+            margin-left: 20px;
+        }
+        a {
+            color: #66ff66;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #99ff99;
+        }
+    </style>
+</head>
+<body>
+    <div id="title">
+        <h1>Visualización de la Información</h1>
+    </div>
+    <div id="sidebar">
+        <ul>
+            <li><a href="intro_personal.html">Intro Personal</a></li>
+            <li>Clases
+                <ul class="submenu">
+                    <li><a href="clase1.html">Clase 1</a></li>
+                    <li><a href="#">Clase 2</a></li>
+                    <li><a href="#">Clase 3</a></li>
+                    <li><a href="#">Clase 4</a></li>
+                    <li><a href="#">Clase 5</a></li>
+                    <li><a href="#">Clase 6</a></li>
+                    <li><a href="#">Clase 7</a></li>
+                    <li><a href="#">Clase 8</a></li>
+                </ul>
+            </li>
+            <li>TPs
+                <ul class="submenu">
+                    <li><a href="#">TP 1</a></li>
+                    <li><a href="#">TP 2</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div id="content">
+        <p>Contenido central aquí. Este será el área que cambie según la navegación.</p>
+    </div>
+    <div id="footer">
+        <p>ITBA - Maestría en Ciencia de Datos - Marzo 2026</p>
+    </div>
+</body>
+</html>
