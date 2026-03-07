@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template</title>
-    <style>
+  <meta charset="utf-8">
+  <meta name="description" content="particles.js is a lightweight JavaScript library for creating particles.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" media="screen" href="./css/style.css">
+
+  <style>
         body {
             background-color: #000000;
             color: #ffffff;
@@ -18,7 +20,7 @@
         #title {
             flex: 0 0 auto;
             text-align: center;
-            background-color: #000000;
+            background-color: transparent;
             padding: 10px;
             font-size: 2em;
         }
@@ -28,13 +30,13 @@
         }
         #sidebar {
             flex: 0 0 auto;
-            background-color: #000000;
+            background-color: transparent;
             padding: 20px;
         }
         #content {
             flex: 1;
             padding: 0;
-            background-color: #000000;
+            background-color: transparent;
             overflow: hidden;
         }
         iframe {
@@ -45,7 +47,7 @@
         #footer {
             flex: 0 0 auto;
             text-align: center;
-            background-color: #000000;
+            background-color: transparent;
             padding: 10px;
         }
         ul {
@@ -68,21 +70,40 @@
         .submenu li {
             font-weight: normal;
         }
-    </style>
+  </style>
+
 </head>
 <body>
-    <div id="title">
+<!-- particles.js container -->
+<div id="particles-js" style="z-index: 0;"></div>
+
+<!-- scripts -->
+<script src="./js/particles.js"></script>
+<script src="./js/app.js"></script>
+
+<script>
+  var update;
+  update = function() {
+    if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+      count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+    }
+    requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+</script>
+
+    <div id="title" style="z-index: 1;">
         <h1>Visualización de la Información</h1>
     </div>
-    <div id="main">
-        <div id="sidebar">
+    <div id="main" style="z-index: 1;">
+        <div id="sidebar" style="z-index: 1;">
             <ul>
                 <li><a href="home.html" target="contentFrame">Home</a></li>
                 <li><a href="intro_personal.html" target="contentFrame">Intro Personal</a></li>
                 <li>Clases
                     <ul class="submenu">
                         <li><a href="clase1.html" target="contentFrame">Clase 1</a></li>
-                        <li><a href="#" target="contentFrame">Clase 2</a></li>
+                        <li><a href="clase2.html" target="contentFrame">Clase 2</a></li>
                         <li><a href="#" target="contentFrame">Clase 3</a></li>
                         <li><a href="#" target="contentFrame">Clase 4</a></li>
                         <li><a href="#" target="contentFrame">Clase 5</a></li>
@@ -99,11 +120,11 @@
                 </li>
             </ul>
         </div>
-        <div id="content">
+        <div id="content" style="z-index: 1;background-color: transparent;">
             <iframe src="home.html" name="contentFrame"></iframe>
         </div>
     </div>
-    <div id="footer">
+    <div id="footer" style="z-index: 1;">
         <p>ITBA - Maestría en Ciencia de Datos - Marzo 2026</p>
     </div>
 </body>
