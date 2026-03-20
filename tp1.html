@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Visualización de la Información</title>
+    <style>
+        body {
+            background-color: transparent;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        .fixed-header {
+            position: sticky;
+            top: 0;
+            flex-shrink: 0;
+            z-index: 100;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0)
+        }
+        .scrollable-content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: flex-start;
+        }
+        .scrollable-content > div {
+            width: 100%;
+        }
+        .scrollable-content > div:last-child object {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .quote {
+            font-size: 1.5em;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        .author {
+            font-weight: bold;
+            text-align: right;
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <div class="fixed-header">
+        <h2>Trabajo Práctico #1: Le pagué una fiesta a EDENOR y no me invitaron</h2>
+    </div>
+    
+    <div class="scrollable-content">
+        <div>
+            <iframe title="Distribución de los cargos facturados" aria-label="Columnas apiladas" id="datawrapper-chart-UFZPM" src="https://datawrapper.dwcdn.net/UFZPM/1/" scrolling="no" frameborder="0" style="width: 100%; border: none; background-color: white;" height="442" data-external="1"></iframe>
+            <script type="text/javascript">window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}});</script>
+            <p>&nbsp;</p>
+        </div>
+        <div>
+            <div class="flourish-embed flourish-chart" data-src="visualisation/28157211"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/28157211/thumbnail" width="100%" alt="visualization" /></noscript></div>
+        </div>
+        <div>
+            <h3>A dónde fue cada peso de la factura?</h3>
+        </div>
+        <div style="display: flex; justify-content: center;">
+            <object type="image/svg+xml" data="tp1/images/alluvial_rawgraph_distribucion_gastos.svg"></object>
+        </div>
+        <div>
+            <p>&nbsp;</p>
+            <div class='tableauPlaceholder' id='viz1774031738932' style='position: relative'><noscript><a href='#'><img alt='Análisis de Consumo eléctrico de EDENOR ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Da&#47;DataVisualization-AnalisisdeconsumodeEDENOR&#47;AnlisisdeConsumoelctricodeEDENOR&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='DataVisualization-AnalisisdeconsumodeEDENOR&#47;AnlisisdeConsumoelctricodeEDENOR' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Da&#47;DataVisualization-AnalisisdeconsumodeEDENOR&#47;AnlisisdeConsumoelctricodeEDENOR&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1774031738932');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='877px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+        </div>
+    </div>
+</body>
+</html>
