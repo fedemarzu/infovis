@@ -10,6 +10,7 @@ Mejoras realizadas:
  
 
 Otras potenciales mejoras a futuro:
-- Agregar un diccionario de datos de los datasets en forma de tabla (revisando coherencia de datos adicionales en cada dataset transformado en cada visualización).
+- Agregar un diccionario de datos de los datasets en forma de tabla (revisando coherencia de datos adicionales en cada dataset, transformado en cada visualización).
 - Mejorar todo el look & feel, contemplando tipos de fuentes, tamaños y diseño más homogéneo.
 - Mejorar leyendas, tooltips y orden de las variables para que cuenten mejor la historia que se desea contar.
+- Editar los SVGs para que mejoren su visualización (leyendas, formato de títulos, etc).
